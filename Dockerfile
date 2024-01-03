@@ -21,5 +21,10 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 # Get Rust & utilities
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN $HOME/.cargo/bin/cargo install bat xcp git-delta dua-cli fd-find jql choose xh fnm broot procs rm-improved bottom ripgrep just
+RUN $HOME/.cargo/bin/cargo install exa tokei
+
+RUN mkdir -p /root/.ssh && \
+    chmod 0700 /root/.ssh \
+COPY github-known-hosts /root/.ssh/known_hosts
 
 CMD ["/usr/bin/zsh"]
