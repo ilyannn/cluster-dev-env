@@ -1,16 +1,11 @@
 FROM docker.io/cruizba/ubuntu-dind
 
-# A ridiculous number, but otherwise I can't build with node.js
-RUN echo ' \
-fs.inotify.max_user_watches = 5242880 \
-fs.inotify.max_user_instances = 5120  \
-' >> /etc/sysctl.conf
-
 # https://forums.docker.com/t/docker-build-with-alpine-fails-to-run-apk/77838/3
 COPY etc/ etc/
 COPY home/ /root/
 
 RUN apt-get update && apt-get install -y \
+    build-essential \
     git    \
     neovim \
     podman 
