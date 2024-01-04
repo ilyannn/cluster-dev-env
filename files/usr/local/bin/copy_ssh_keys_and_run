@@ -7,7 +7,7 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_ed25519
 
 # Start ssh-agent and add your private key
-eval $(ssh-agent -s)
+eval "$(ssh-agent -s)"
 ssh-add /root/.ssh/id_ed25519
 
 # Do whatever comes next, exec "$@" will replace the script with the command that follows
