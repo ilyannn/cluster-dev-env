@@ -12,7 +12,7 @@ RUN $HOME/.cargo/bin/cargo install bat xcp git-delta dua-cli fd-find jql choose 
 RUN echo '. "$HOME/.cargo/env" ' >> ~/.zshrc && echo '. ~/.p10k.zsh' >> ~/.zshrc
 
 # https://github.com/deluan/zsh-in-docker
-RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
+RUN sh -c "$(curl https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
     -p git -p ssh-agent -p 'history-substring-search' \
     -p https://github.com/zsh-users/zsh-autosuggestions \
     -p https://github.com/zsh-users/zsh-completions \
