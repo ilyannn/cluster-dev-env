@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 
 # Get Rust & utilities
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
-RUN $HOME/.cargo/bin/cargo install bat xcp git-delta dua-cli fd-find jql choose xh fnm broot procs rm-improved bottom ripgrep just exa tokei
+RUN $HOME/.cargo/bin/cargo install bat git-delta fd-find jql fnm broot procs bottom ripgrep just exa
 RUN echo '. "$HOME/.cargo/env" ' >> ~/.zshrc && echo '. ~/.p10k.zsh' >> ~/.zshrc
 
 # https://github.com/deluan/zsh-in-docker
