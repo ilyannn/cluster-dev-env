@@ -7,7 +7,7 @@ on: # yamllint disable-line rule:truthy
     
 jobs:
   build:
-    runs-on: arc-runner-{{ github.event.repository.name }}
+    runs-on: arc-runner-cluster-dev-env
 
     steps:
       - name: Check out main repository
