@@ -24,7 +24,7 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 COPY files/ /
 
 # Need ssh keys mounted in /mnt/ssh-keys
-RUN chmod +x /usr/bin/copy_ssh_keys_and_run
+RUN chmod +x /usr/local/bin/copy_ssh_keys_and_run
 
 WORKDIR /root
 CMD ["/usr/bin/zsh"]
