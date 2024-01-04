@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Correct the permissions of the .ssh directory and known keys
-cp /mnt/ssh-keys/ ~/.ssh/
+cat /mnt/ssh-keys/id_ed25519 > ~/.ssh/id_ed25519
+cat /mnt/ssh-keys/id_ed25519.pub > ~/.ssh/id_ed25519.pub
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_ed25519
 
