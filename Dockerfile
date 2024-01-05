@@ -12,7 +12,7 @@ RUN $HOME/.cargo/bin/cargo install bat git-delta fd-find jql fnm broot procs bot
 RUN echo '. "$HOME/.cargo/env" ' >> ~/.zshrc && echo '. ~/.p10k.zsh' >> ~/.zshrc
 
 # https://github.com/deluan/zsh-in-docker
-RUN sh -c "$(curl https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
+RUN sh -c "$(curl -L https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
     -p git -p ssh-agent -p 'history-substring-search' \
     -p https://github.com/zsh-users/zsh-autosuggestions \
     -p https://github.com/zsh-users/zsh-completions \
